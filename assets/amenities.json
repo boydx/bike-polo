@@ -1,4 +1,4 @@
-{
+var locations = {
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
@@ -22,4 +22,4 @@
 { "type": "Feature", "properties": { "name": "Crankworks Bicycles", "type": "Bike Shop", "desc": "The place you go for all of your cycling needs", "link": "<a href=\"https:\/\/www.crankworksbicycles.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.526754429794337, 38.019371718526862 ] } },
 { "type": "Feature", "properties": { "name": "Limestone Blue", "type": "Food", "desc": "Locally driven and inspired eatery & beer+ wine bar", "link": "<a href=\"http:\/\/www.limestoneblue.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.496195715158933, 38.047108748264144 ] } }
 ]
-}
+};
