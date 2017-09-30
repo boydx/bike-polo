@@ -6,3 +6,8 @@ Maps and assets for the World Hardcourt Bike Polo Championships in Lexington, Ke
 * Polo sponsors as [GeoJSON](amenities.geojson)
 * Static map as [PNG](bike-polo-tourney-map.png)
 * [lexingtonbikepolo.com](https://lexingtonbikepolo.com)
+* [Slippy map](https://boydx.github.io/bike-polo)
+
+## Goals
+
+* Get slippy map page up by first day of games.
