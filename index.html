@@ -53,8 +53,8 @@
 
     #map {
       width: 100%;
-      height: 450px;
-      margin-bottom: 20px;
+      /* height: 450px;
+      margin-bottom: 20px;*/
     }
 
     #header {
@@ -66,6 +66,62 @@
       padding: 5px 0px 0px 8px;
       z-index: 9999;
     }
+
+    #info-button {
+        padding: 0px 1px;
+        font: 12px/12px Arial, Helvetica, sans-serif;
+        background: rgba(250, 250, 250, 0.8);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        position: fixed;
+        top: 130px;
+        left: 10px;
+        z-index: 9999;
+    }
+
+    #attributes {
+        float: right;
+    }
+
+    #attributes img {
+        float: left;
+        height: 200px;
+        margin: -5px 10px 0px 0px;
+    }
+
+    #footer {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        height: 0px;
+        padding: 8px 5px 5px 8px;
+        z-index: 9000;
+        position: fixed;
+        bottom: -10px;
+        overflow: scroll;
+    }
+
+    #legend .legend-items img {
+        float: left;
+        width: 28px;
+        height: 28px;
+        margin-right: 5px;
+    }
+
+    .legend-items {
+       float: left;
+        padding: 2px 10px 2px 2px;
+        margin: 0 0 5px 0;
+        font-size: 1.4em;
+
+    }
+
+    #credit {
+      font-size:1em;
+      position: fixed;
+      bottom:-20px;
+    }
+
   </style>
 
   <!-- Favicon
@@ -85,8 +141,29 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="map"></div>
-  <div class="container">
+  <div id="map">
+    <button id="info-button" onclick="myInfo()">Info</button>
+    <div id="footer">
+
+      <div id="attributes">
+        <img src="assets/tourney_small.png">
+      </div>
+        <div id="legend">
+          <h3>Lexington's polo friends</h3>
+
+          <div class="legend-items"> <img src="assets/ky.svg" style="width: 70px;height: 35px;">Swag</div>
+          <div class="legend-items"> <img src="assets/bike.svg">Mechanics</div>
+          <div class="legend-items"> <img src="assets/brew.svg">Brews</div>
+          <div class="legend-items"> <img src="assets/bar.svg">Bourbon</div>
+          <div class="legend-items"> <img src="assets/food.svg">Fine eats</div>
+          <div id="credit"> Maps from <a href="https://outrageGIS.com" target="blank">outragGIS mapping</a> | <a href="https://outrageGIS.com/maps/bluegrass" target="blank">bluegrass trails</a></div>
+
+        </div>
+
+
+    </div>
+  </div>
+  <!-- <div class="container">
     <div class="row">
       <div class="full column">
         <h1>Topics</h1>
@@ -122,7 +199,7 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
 
 
 
@@ -153,19 +230,19 @@
           attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
         });
 
-      var iconLinks = ["assets/bar.svg", "assets/bike.svg", "assets/brew.svg", "assets/food.svg", "assets/arena.png", ]
+      var iconLinks = ["assets/bar.svg", "assets/bike.svg", "assets/brew.svg", "assets/food.svg", "assets/arena.png", "assets/ky.svg"]
 
       // Fit the map area of interest
 
       var bounds = new L.LatLngBounds(
-        new L.LatLng(38.0360, -84.5096), // lower left
-        new L.LatLng(38.0440, -84.4977)); // upper right
+        new L.LatLng(38.0593202,-84.4962117), // lower left
+        new L.LatLng(38.0598531,-84.49)); // upper right
 
       var map = L.map('map', options_map).addLayer(osm_map).fitBounds(bounds);
 
       var options_map = {
         minZoom: 8,
-        maxZoom: 20
+        maxZoom: 22
       };
 
 
@@ -179,7 +256,7 @@
 
 
 
-      /* --------------- Layer of workshop locations ---------------  */
+      /* --------------- Locations ---------------  */
 
 
       // Build popup and select icon for locations
@@ -189,10 +266,11 @@
         var popupContent = "<h4 style='margin-bottom:-10px;'>" + locations.features[j].properties.name + "</h4><br>" + locations.features[j].properties.desc + "<br>" + locations.features[j].properties.type + ": " + locations.features[j].properties.link;
 
         var icoURL = "";
-        var icoSize = [30, 30];
+        var icoSize = [35, 35];
 
-        if (locations.features[j].properties.type.match(/Food/g)) {
-          var icoURL = iconLinks[3]
+        if (locations.features[j].properties.type.match(/Arena/g)) {
+          var icoURL = iconLinks[4],
+            icoSize = [150, 150]
 
         } else if (locations.features[j].properties.type.match(/Bike/g)) {
           var icoURL = iconLinks[1]
@@ -200,9 +278,13 @@
           var icoURL = iconLinks[0]
         } else if (locations.features[j].properties.type.match(/Brew/g)) {
           var icoURL = iconLinks[2]
-        } else if (locations.features[j].properties.type.match(/Arena/g)) {
-          var icoURL = iconLinks[4],
-          icoSize = [100, 100];
+        } else if (locations.features[j].properties.type.match(/Food/g)) {
+          var icoURL = iconLinks[3]
+
+        } else if (locations.features[j].properties.type.match(/Swag/g)) {
+          var icoURL = iconLinks[5],
+            icoSize = [100, 100]
+
 
         } else {
           var icoURL = "assets/food.svg",
@@ -229,6 +311,35 @@
       L.control.layers(baseMaps).addTo(map);
       L.control.locate().addTo(map);
       L.control.scale().addTo(map);
+
+      /* ************ Functions *************** */
+
+
+      /* --------------- Toggle on/off info footer content ---------------  */
+
+      function myInfo() {
+
+        var x = document.getElementById('footer');
+        if (x.style.height === '215px') {
+          x.style.height = '0px';
+        } else {
+          x.style.height = '215px';
+        }
+
+        var z = document.getElementById('credit');
+        if (z.style.bottom === '0px') {
+          z.style.bottom = '-20px';
+        } else {
+          z.style.bottom = '0px';
+        }
+
+        var y = document.getElementById('info-button');
+        if (y.style.background === 'rgba(146, 239, 146, 0.8)') {
+          y.style.background = 'rgba(250, 250, 250, 0.8)'
+        } else {
+          y.style.background = 'rgba(146, 239, 146, 0.8)'
+        }
+      }
     </script>
 </body>
 

@@ -2,7 +2,7 @@ var locations = {
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "name": "Bike Polo Courts", "type": "Arena", "desc": "The dark and bloody ground", "link": "<a href=\"https:\/\/lexingtonbikepolo.com\/raw\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.493384880198974, 38.059776849003221 ] } },
+
 { "type": "Feature", "properties": { "name": "County Club", "type": "Food", "desc": "Classy smoked meats and smokin' hipsters", "link": "< href=\"https:\/\/countyclubrestaurant.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.493044727931988, 38.059243872719961 ] } },
 { "type": "Feature", "properties": { "name": "Broke Spoke Community Bike Shop", "type": "Bike Shop", "desc": "Buy used bikes\/parts and rent workstand time", "link": "<a href=\"http:\/\/thebrokespoke.org\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.49218864288477, 38.0597736210145 ] } },
 { "type": "Feature", "properties": { "name": "Smithtown Seafood", "type": "Food", "desc": "Farm-to-table restaurant emphasizing local foods and old-fashioned Kentucky recipes", "link": "<a href=\"http:\/\/www.smithtownseafood.com\/menu\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.492181278695767, 38.059477603501719 ] } },
@@ -10,6 +10,8 @@ var locations = {
 { "type": "Feature", "properties": { "name": "Grey Goose Pizza", "type": "Food", "desc": "Skinny crust pizza and fat beers", "link": "<a href=\"http:\/\/greygooserestaurants.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.501015491464159, 38.05307069828153 ] } },
 { "type": "Feature", "properties": { "name": "The Green Lantern", "type": "Bar", "desc": "Rocking good times", "link": "<a herf=\"https:\/\/www.facebook.com\/The-Green-Lantern-Bar-183595498351037\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.498334473634131, 38.054992074799792 ] } },
 { "type": "Feature", "properties": { "name": "Broomwagon", "type": "Food", "desc": "BIKES + COFFEE + BEER + FOOD.", "link": "<a href=\"http:\/\/broomwagonbikes.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.481245441502281, 38.05725988093878 ] } },
+{ "type": "Feature", "properties": { "name": "Broomwagon", "type": "Bike Shop", "desc": "Mechanics on staff!", "link": "<a href=\"http:\/\/broomwagonbikes.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.4813, 38.0574 ] } },
+
 { "type": "Feature", "properties": { "name": "KY 4 KY", "type": "Swag", "desc": "Kentucky Kicks Ass", "link": "<a href=\"http:\/\/www.kyforky.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.481325629236295, 38.056427841040268 ] } },
 { "type": "Feature", "properties": { "name": "Rock House Brewery", "type": "Brewery", "desc": "Top quality beers and music", "link": "<a href=\"http:\/\/rockhousebrewing.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.481909525789717, 38.055959976133252 ] } },
 { "type": "Feature", "properties": { "name": "Al's Bar", "type": "Bar", "desc": "Beer garden, live music, and original polo dive bar", "link": "<a href=\"http:\/\/www.alsbarlexington.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.486382063791751, 38.054081771525809 ] } },
@@ -20,6 +22,7 @@ var locations = {
 { "type": "Feature", "properties": { "name": "Sunrise Bakery", "type": "Food", "desc": "The love of family, traditions, food, and above all, bread. ", "link": "<a href=\"http:\/\/valotta.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.497092341929516, 38.046614954016619 ] } },
 { "type": "Feature", "properties": { "name": "Lexington Bicycle Center", "type": "Bike Shop", "desc": "Cycling should be fun for everyone", "link": "<a href=\"http:\/\/www.lexingtonbicyclecenter.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.524075994431044, 38.046912063106404 ] } },
 { "type": "Feature", "properties": { "name": "Crankworks Bicycles", "type": "Bike Shop", "desc": "The place you go for all of your cycling needs", "link": "<a href=\"https:\/\/www.crankworksbicycles.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.526754429794337, 38.019371718526862 ] } },
-{ "type": "Feature", "properties": { "name": "Limestone Blue", "type": "Food", "desc": "Locally driven and inspired eatery & beer+ wine bar", "link": "<a href=\"http:\/\/www.limestoneblue.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.496195715158933, 38.047108748264144 ] } }
+{ "type": "Feature", "properties": { "name": "Limestone Blue", "type": "Food", "desc": "Locally driven and inspired eatery & beer+ wine bar", "link": "<a href=\"http:\/\/www.limestoneblue.com\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.496195715158933, 38.047108748264144 ] } },
+{ "type": "Feature", "properties": { "name": "Bike Polo Courts", "type": "Arena", "desc": "The dark and bloody ground", "link": "<a href=\"https:\/\/lexingtonbikepolo.com\/raw\/\">link<\/a>" }, "geometry": { "type": "Point", "coordinates": [ -84.493384880198974, 38.059776849003221 ] } }
 ]
 };
