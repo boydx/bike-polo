@@ -1,8 +1,9 @@
 # bike-polo
-Maps and assets for the World Hardcourt Bike Polo Championships in Lexington, Kentucky, October 3-7, 2017   
-![Banner image for event](assets/whbpc-website-694x220.jpg)   
+## Maps for the World Hardcourt Bike Polo Championships
+![Banner image for event](assets/tourney.png)   
 
-![Lexington Kentucky](assets/lex-ky.svg)   
+## Lexington, Kentucky, October 3-7, 2017   
+![Lexington Kentucky](assets/lex-ky.png)   
 
 ## Resources
 * Polo sponsors as [GeoJSON](amenities.geojson)
@@ -13,4 +14,4 @@ Maps and assets for the World Hardcourt Bike Polo Championships in Lexington, Ke
 
 ## Goals
 
-* Get slippy map page up by first day of games.
+* Get slippy map page up by October 1.
