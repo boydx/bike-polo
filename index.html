@@ -226,8 +226,8 @@
           attribution: "<a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap contributors</a>"
 
         }),
-        toner = L.tileLayer("https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}.png", {
-          attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
+        dark = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}@2x.png", {
+          attribution: 'Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
         });
 
       var iconLinks = ["assets/bar.svg", "assets/bike.svg", "assets/brew.svg", "assets/food.svg", "assets/arena.png", "assets/ky.png"]
@@ -249,6 +249,7 @@
       var baseMaps = {
         "Photo map": photo,
         "OSM map": osm_map,
+        "Light map": dark,
       };
 
 
