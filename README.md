@@ -14,4 +14,4 @@
 
 ## Goals
 
-* Get slippy map page up by October 3, first day of games. Ya, right!
+* Get slippy map page up by October 3, first day of games. Ya, right. Yes.
