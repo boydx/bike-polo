@@ -12,6 +12,3 @@
 * Club website: [lexingtonbikepolo.com](https://lexingtonbikepolo.com)
 * Tourney website: [nahardcourt.com/whbpc](http://www.nahardcourt.com/whbpc/)
 
-## Goals
-
-* Get slippy map page up by October 3, first day of games. Ya, right. Yes.
